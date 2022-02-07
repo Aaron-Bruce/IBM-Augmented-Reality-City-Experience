@@ -1,4 +1,1 @@
-# IBM-Augmented-Reality-City-Experience 
-
-
-Hello World 
+# IBM-Augmented-Reality-City-Experience    
