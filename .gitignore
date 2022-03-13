@@ -5,36 +5,36 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/Ruby/IBM-Augmented-Reality-City-Experience/.bundle
+/.bundle
 
 # Ignore the default SQLite database.
-/Ruby/IBM-Augmented-Reality-City-Experience/db/*.sqlite3
-/Ruby/IBM-Augmented-Reality-City-Experience/db/*.sqlite3-*
+/db/*.sqlite3
+/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/Ruby/IBM-Augmented-Reality-City-Experience/log/*
-/Ruby/IBM-Augmented-Reality-City-Experience/tmp/*
-/Ruby/IBM-Augmented-Reality-City-Experience!/log/.keep
-/Ruby/IBM-Augmented-Reality-City-Experience!/tmp/.keep
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/Ruby/IBM-Augmented-Reality-City-Experience/tmp/pids/*
-/Ruby/IBM-Augmented-Reality-City-Experience!/tmp/pids/
-/Ruby/IBM-Augmented-Reality-City-Experience!/tmp/pids/.keep
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/Ruby/IBM-Augmented-Reality-City-Experience/storage/*
-/Ruby/IBM-Augmented-Reality-City-Experience!/storage/.keep
-/Ruby/IBM-Augmented-Reality-City-Experience/tmp/storage/*
-/Ruby/IBM-Augmented-Reality-City-Experience!/tmp/storage/
-/Ruby/IBM-Augmented-Reality-City-Experience!/tmp/storage/.keep
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
 
-/Ruby/IBM-Augmented-Reality-City-Experience/public/assets
+/public/assets
 
 # Ignore master key for decrypting credentials and more.
-/Ruby/IBM-Augmented-Reality-City-Experience/config/master.key
+/config/master.key
 
-/Ruby/IBM-Augmented-Reality-City-Experience/.vscode
-/Ruby/IBM-Augmented-Reality-City-Experience/.vscode/
-/Ruby/IBM-Augmented-Reality-City-Experience/.idea
-/Ruby/IBM-Augmented-Reality-City-Experience/.idea/
+.vscode/
+/.vscode/
+.idea
+/.idea/
