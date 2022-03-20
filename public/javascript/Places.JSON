@@ -1,0 +1,29 @@
+{
+    "places" : [
+        {
+            "id" : 1,
+            "name" : "Trinity College Dublin",
+            "location" : {
+                "lat" : "53.344250",
+                "lng" : "-6.262410"
+            }
+                        
+        },
+        {
+            "id" : 2,
+            "name" : "The Spire",
+            "location" : {
+                "lat" : "53.349773",
+                "lng" : "-6.260288"
+            }
+        },
+        {
+            "id" : 3,
+            "name" : "O'Connell Bridge",
+            "location"  : {
+                "lat" : "53.347250",
+                "lng" : "-6.259118"
+            }
+        }
+    ]
+}
