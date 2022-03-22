@@ -22,12 +22,5 @@
 
 class HomeController < ApplicationController
   def home
-    API_KEY = 1111
-  
-    @client = GooglePlaces::Client.new(API_KEY)
-    
-    @client.spots(-33.8670522, 151.1957362, :radius => 100)
-
-
   end
 end
