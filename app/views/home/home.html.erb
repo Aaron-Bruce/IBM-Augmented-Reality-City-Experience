@@ -1,33 +1,118 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>GeoAR.js demo</title>
-<!--  <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>-->
-<!--  <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>-->
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GeoAR.js demo</title>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <link rel="stylesheet" href="/home.css" />
+  </head>
 
-<!--<link rel="stylesheet" href="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/src/location-based/stylesheets/index.css">-->
+  <link
+    rel="stylesheet"
+    href="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/src/location-based/stylesheets/index.css"
+  />
 
-<!-- Dynamically add places from Javascript -->
-<!--<script src="javascript/places.js"></script>-->
+  <!-- Dynamically add places from Javascript -->
+  <script src="javascript/places.js"></script>
 
-<body>
-<!--<a-scene-->
-<!--  cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'-->
-<!--  raycaster="objects: [gps-entity-place];"-->
-<!--  vr-mode-ui="enabled: false"-->
-<!--  embedded-->
-<!--  arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>-->
+  <body>
+    <!-- <a-scene
+      cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 0;"
+      raycaster="objects: [gps-entity-place];"
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+    > -->
+    <div class="modal-container">
+      <!-- Top image part -->
+      <div class="top-part">
+        <h1>
+          The Old Mill
+        </h1>
+        <div class="horizontal-line"></div>
+        <div class="star-reviews">
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.98543 1.59817C6.58075 -0.251505 9.19777 -0.251506 9.79308 1.59817L10.0414 2.36962C10.3075 3.19635 11.0767 3.75688 11.9452 3.75688H12.7888C14.7216 3.75688 15.5302 6.22641 13.9717 7.36957L13.2566 7.89406C12.5623 8.40334 12.2718 9.29984 12.5356 10.1195L12.801 10.9441C13.3952 12.7901 11.278 14.3165 9.71434 13.1695L9.07214 12.6985C8.36809 12.1821 7.41042 12.1821 6.70638 12.6985L6.06418 13.1695C4.50049 14.3165 2.38335 12.7901 2.97747 10.9441L3.24287 10.1195C3.50668 9.29984 3.21625 8.40334 2.52193 7.89406L1.80686 7.36957C0.248311 6.22641 1.05689 3.75688 2.98973 3.75688H3.83332C4.70183 3.75688 5.47106 3.19636 5.73715 2.36962L5.98543 1.59817Z"
+              fill="#F8BC24"
+            />
+          </svg>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.98543 1.59817C6.58075 -0.251505 9.19777 -0.251506 9.79308 1.59817L10.0414 2.36962C10.3075 3.19635 11.0767 3.75688 11.9452 3.75688H12.7888C14.7216 3.75688 15.5302 6.22641 13.9717 7.36957L13.2566 7.89406C12.5623 8.40334 12.2718 9.29984 12.5356 10.1195L12.801 10.9441C13.3952 12.7901 11.278 14.3165 9.71434 13.1695L9.07214 12.6985C8.36809 12.1821 7.41042 12.1821 6.70638 12.6985L6.06418 13.1695C4.50049 14.3165 2.38335 12.7901 2.97747 10.9441L3.24287 10.1195C3.50668 9.29984 3.21625 8.40334 2.52193 7.89406L1.80686 7.36957C0.248311 6.22641 1.05689 3.75688 2.98973 3.75688H3.83332C4.70183 3.75688 5.47106 3.19636 5.73715 2.36962L5.98543 1.59817Z"
+              fill="#F8BC24"
+            />
+          </svg>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.98543 1.59817C6.58075 -0.251505 9.19777 -0.251506 9.79308 1.59817L10.0414 2.36962C10.3075 3.19635 11.0767 3.75688 11.9452 3.75688H12.7888C14.7216 3.75688 15.5302 6.22641 13.9717 7.36957L13.2566 7.89406C12.5623 8.40334 12.2718 9.29984 12.5356 10.1195L12.801 10.9441C13.3952 12.7901 11.278 14.3165 9.71434 13.1695L9.07214 12.6985C8.36809 12.1821 7.41042 12.1821 6.70638 12.6985L6.06418 13.1695C4.50049 14.3165 2.38335 12.7901 2.97747 10.9441L3.24287 10.1195C3.50668 9.29984 3.21625 8.40334 2.52193 7.89406L1.80686 7.36957C0.248311 6.22641 1.05689 3.75688 2.98973 3.75688H3.83332C4.70183 3.75688 5.47106 3.19636 5.73715 2.36962L5.98543 1.59817Z"
+              fill="#F8BC24"
+            />
+          </svg>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.98543 1.59817C6.58075 -0.251505 9.19777 -0.251506 9.79308 1.59817L10.0414 2.36962C10.3075 3.19635 11.0767 3.75688 11.9452 3.75688H12.7888C14.7216 3.75688 15.5302 6.22641 13.9717 7.36957L13.2566 7.89406C12.5623 8.40334 12.2718 9.29984 12.5356 10.1195L12.801 10.9441C13.3952 12.7901 11.278 14.3165 9.71434 13.1695L9.07214 12.6985C8.36809 12.1821 7.41042 12.1821 6.70638 12.6985L6.06418 13.1695C4.50049 14.3165 2.38335 12.7901 2.97747 10.9441L3.24287 10.1195C3.50668 9.29984 3.21625 8.40334 2.52193 7.89406L1.80686 7.36957C0.248311 6.22641 1.05689 3.75688 2.98973 3.75688H3.83332C4.70183 3.75688 5.47106 3.19636 5.73715 2.36962L5.98543 1.59817Z"
+              fill="#F8BC24"
+            />
+          </svg>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.98543 1.59817C6.58075 -0.251505 9.19777 -0.251506 9.79308 1.59817L10.0414 2.36962C10.3075 3.19635 11.0767 3.75688 11.9452 3.75688H12.7888C14.7216 3.75688 15.5302 6.22641 13.9717 7.36957L13.2566 7.89406C12.5623 8.40334 12.2718 9.29984 12.5356 10.1195L12.801 10.9441C13.3952 12.7901 11.278 14.3165 9.71434 13.1695L9.07214 12.6985C8.36809 12.1821 7.41042 12.1821 6.70638 12.6985L6.06418 13.1695C4.50049 14.3165 2.38335 12.7901 2.97747 10.9441L3.24287 10.1195C3.50668 9.29984 3.21625 8.40334 2.52193 7.89406L1.80686 7.36957C0.248311 6.22641 1.05689 3.75688 2.98973 3.75688H3.83332C4.70183 3.75688 5.47106 3.19636 5.73715 2.36962L5.98543 1.59817Z"
+              fill="#F8BC24"
+            />
+          </svg>
+        </div>
+      </div>
 
-<!--  <a-camera gps-camera rotation-reader>-->
-<!--  </a-camera>-->
-<!--</a-scene>-->
-<% @locations.each do |location|  %>
-  <h1><%=location[:geometry][:location][:lat] %></h1>
-  <h1><%=location[:geometry][:location][:lng] %></h1>
-  <br>
-<% end %>
-</body>
+      <!-- Bottom info part -->
+      <div class="bottom-part">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus, urna sed auctor suscipit, augue.</p>
+        <div class="info"><%= image_tag "share.png" %> <a href="http://oldmillrestaurant.ie/">http://oldmillrestaurant.ie/</a></div>
+        <div class="info"><%= image_tag "phone.png" %><a href="tel:+35316719266"">(01) 671 9266</a></div>
+        <div class="info"><%= image_tag "calendar.png" %><p>Monday	10a.m.–10:30p.m.</p></div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <%= image_tag "facebook.png" %>
+        <%= image_tag "twitter.png" %>
+        <%= image_tag "instagram.png" %>
+      </div>
+    </div>
+
+    <!-- <a-camera gps-camera rotation-reader> </a-camera>
+    </a-scene> -->
+  </body>
 </html>
