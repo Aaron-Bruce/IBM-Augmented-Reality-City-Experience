@@ -4,6 +4,8 @@ require "net/http"
 require_relative "../../API_KEY.rb"
 class HomeController < ApplicationController
   def home
+  longitude = params(:longitude)
+  latitude = params(:latitude)
   uri_string = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=53.3444407%2C-6.2595753&radius=750&type=restaurant&key=#{KEY}"
   url = URI(uri_string)
 
