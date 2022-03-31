@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   latitude = params[:latitude]
   longitude.to_s
   latitude.to_s
-  uri_string = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=53.3444407%2C-6.2595753&radius=750&type=restaurant&key=#{KEY}"
+  uri_string = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?'+longitude+','+latitude+'&radius=750&type=restaurant&key=#{KEY}"
   url = URI(uri_string)
 
   https = Net::HTTP.new(url.host, url.port)
