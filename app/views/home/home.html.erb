@@ -28,6 +28,9 @@
     gps-entity-place="latitude: location[:geometry][:location][:lat]; longitude: location[:geometry][:location][:lng]"
     src="location[:icon]" width="2" height="2">
     </a-image>
+    <script type="text/javascript" charset="utf-8">
+      console.log(<%= location[:geometry][:location][:lat]%>);
+    </script>
   <%end%>
 </a-scene>
 </body>
