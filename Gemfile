@@ -10,6 +10,8 @@ gem 'google_places'
 #for API calls
 gem 'httparty'
 
+gem  'faraday'
+gem 'faraday_middleware'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
