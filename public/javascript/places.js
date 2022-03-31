@@ -5,14 +5,14 @@ window.onload = () => {
 
                 var latitude = position.coords.latitude;
                 var longitude = position.coords.longitude;
+                console.log
+                window.open("/home?latitude="+latitude+"&longitude"+longitude,"self");
 
-                //window.open("home_controller/home?latitude="+latitude+"&longitude"+longitude,"self");
-
-                $.ajax({
-                    url: "/home/?latitude="+latitude+"&longitude"+longitude,
-                    type: "POST",
-                    data: values
-                });
+                //$.ajax({
+                //    url: "/home/?latitude="+latitude+"&longitude"+longitude,
+                //    type: "POST",
+                //    data: values
+               // });
 
             (err) => console.error('Error in retrieving position', err),
             {
