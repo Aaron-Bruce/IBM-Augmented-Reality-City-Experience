@@ -18,7 +18,8 @@ class HomeController < ApplicationController
   response = https.request(request)
   data = JSON.parse(response.read_body)
   @locations = data["results"]
-  puts longitude
-  puts latitude
+  #puts longitude
+  #puts latitude
+  puts @locations["geometry"]["location"]["lat"]
   end
 end
