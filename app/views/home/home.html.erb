@@ -26,7 +26,7 @@
    <% @locations.each do |location| %>
     <a-image 
     gps-entity-place="latitude: location[:geometry][:location][:lat]; longitude: location[:geometry][:location][:lng]"
-    src=location[:icon]>
+    src="location[:icon]" width="2" height="2">
     </a-image>
   <%end%>
 </a-scene>
