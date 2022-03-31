@@ -6,7 +6,7 @@ window.onload = () => {
                 var latitude = position.coords.latitude;
                 var longitude = position.coords.longitude;
 
-                //window.open("localhost:3000//home_controller/home?latitude="+latitude+"&longitude"+longitude,"self");
+                //window.open("home_controller/home?latitude="+latitude+"&longitude"+longitude,"self");
 
                 $.ajax({
                     url: "/home/?latitude="+latitude+"&longitude"+longitude,
