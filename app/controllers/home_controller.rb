@@ -6,7 +6,8 @@ class HomeController < ApplicationController
   def home
   longitude = params[:longitude]
   latitude = params[:latitude]
-
+  longitude.to_s
+  latitude.to_s
   uri_string = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=53.3444407%2C-6.2595753&radius=750&type=restaurant&key=#{KEY}"
   url = URI(uri_string)
 
@@ -18,8 +19,8 @@ class HomeController < ApplicationController
   response = https.request(request)
   data = JSON.parse(response.read_body)
   @locations = data["results"]
-  #puts longitude
-  #puts latitude
-  puts @locations["geometry"]["location"]["lat"]
+  puts longitude
+  puts latitude
+  #puts @locations["geometry"]["location"]["lat"]
   end
 end
