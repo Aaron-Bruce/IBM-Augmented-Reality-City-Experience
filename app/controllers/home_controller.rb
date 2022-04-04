@@ -9,11 +9,11 @@ class HomeController < ApplicationController
       latitude = params[:latitude]
       longitude.to_s
       latitude.to_s
-      puts "data update"
-      puts latitude
-      puts longitude
+      #puts "data update"
+      #puts latitude
+      #puts longitude
       uri_string = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{latitude},#{longitude}&radius=750&key=#{KEY}"
-      puts uri_string
+      #puts uri_string
       url = URI(uri_string)
 
       https = Net::HTTP.new(url.host, url.port)
@@ -24,8 +24,10 @@ class HomeController < ApplicationController
       response = https.request(request)
 
       data = JSON.parse(response.read_body)
+      JSON.pretty_generate(data)
       @locations = data["results"]
-      puts "locations = "
+      JSON.pretty_generate(@locations)
+      #puts "locations = "
       puts @locations
       # render :partial => 'marker', :content_type => 'text/html'
     else
