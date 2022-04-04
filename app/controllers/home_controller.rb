@@ -27,7 +27,7 @@ class HomeController < ApplicationController
       @locations = data["results"]
       puts "locations = "
       puts @locations
-      render :partial => 'marker', :content_type => 'text/html'
+      # render :partial => 'marker', :content_type => 'text/html'
     else
       @locations = {}
       puts "first locations = "
