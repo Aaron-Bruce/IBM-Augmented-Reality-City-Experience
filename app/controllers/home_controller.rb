@@ -27,16 +27,16 @@ class HomeController < ApplicationController
       @locations = data["results"]
       puts "locations = "
       puts @locations
-      # render :partial => 'marker', :content_type => 'text/html'
+      render :partial => 'marker', :content_type => 'text/html'
     else
       @locations = {}
       puts "first locations = "
       puts @locations
       render 'home'
     end
-  #puts longitude
-  #puts latitude
-  #puts @locations["geometry"]["location"]["lat"]
+    #puts longitude
+    #puts latitude
+    #puts @locations["geometry"]["location"]["lat"]
   end
 
   # def data_update

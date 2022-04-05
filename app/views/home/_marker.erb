@@ -29,8 +29,30 @@
       <div class="marker" data-lat="<%= location["geometry"]["location"]["lat"] %>" data-lng="<%= location["geometry"]["location"]["lng"] %>">
         <a-image
           gps-entity-place="latitude: <%= location["geometry"]["location"]["lat"]%>; longitude: <%= location["geometry"]["location"]["lng"] %>"
-          src="<%= location[:icon] %>" width="200" height="200">
-          <h1><%= location[:name] %></h1>
+          src="<%= location["icon"] %>" width="200" height="200">
+
+                <a-text value="<%= location["name"] %>" gps-entity-place="latitude: <%= location["geometry"]["location"]["lat"]%>; longitude: <%= location["geometry"]["location"]["lng"] %>">
+
+                </a-text>
+
+
+
+
+            <!-- Bottom info part -->
+
+                <% if location["opening_hours"].present? %>
+                  <% if location["opening_hours"]["open_now"] %>
+                    <%= image_tag "calendar.png" %><a-text value="Open" gps-entity-place="latitude: <%= location["geometry"]["location"]["lat"]%>; longitude: <%= location["geometry"]["location"]["lng"] %>">
+
+              </a-text>
+                  <% else %>
+                    <%= image_tag "calendar.png" %><a-text value="Closed" gps-entity-place="latitude: <%= location["geometry"]["location"]["lat"]%>; longitude: <%= location["geometry"]["location"]["lng"] %>">
+
+              </a-text>
+                  <%end  %>
+            <%end %>
+
+
         </a-image>
       </div>
     <%end%>
@@ -38,4 +60,5 @@
 </a-scene>
 
 </body>
+<script src="javascript/places.js"></script>
 </html>
