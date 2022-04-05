@@ -24,17 +24,15 @@
   arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
   <a-camera gps-camera rotation-reader>
   </a-camera>
-  <div id="markers">
-    <% @locations.each do |location| %>
-
-      </div>
-    <%end%>
-  </div>
   <a-image
           gps-entity-place="latitude: 53.28749513563198; longitude: -6.68678951279796"
           src= <%= image_path('map-marker.png') %>
           scale = '20, 20'>
-        </a-image>
+  </a-image>
+  <div id="markers">
+    <% @locations.each do |location| %>
+    <%end%>
+  </div>
 </a-scene>
 
 </body>
