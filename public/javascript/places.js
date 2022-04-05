@@ -5,6 +5,9 @@
     if (window.location.href.indexOf("?") == -1) {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
+        console.log("position: ", position);
+        console.log("latitude: ", latitude);
+        console.log("longitude: ", longitude);
              $.ajax({
          type:"GET",
          url:"home/",
