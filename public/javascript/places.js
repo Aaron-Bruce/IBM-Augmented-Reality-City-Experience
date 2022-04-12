@@ -1,20 +1,22 @@
-
-        // first get current user location
- navigator.geolocation.getCurrentPosition(function (position) {
+navigator.geolocation.getCurrentPosition(function (position) {
     //Reload page with new url  only if no location is set
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    console.log(latitude);
+    console.log(longitude);
     if (window.location.href.indexOf("?") == -1) {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
-             $.ajax({
-         type:"GET",
-         url:"home/",
-         dataType:"json",
-         data: {"latitude": latitude, "longitude": longitude}
-     });
+        $.ajax({
+            type:"GET",
+            url:"home/",
+            dataType:"json",
+            data: {"latitude": latitude, "longitude": longitude}
+        });
         window.location.href = window.location.href + "?latitude=" + latitude + "&longitude=" + longitude;
     }
 
-    
+
 
 
 });

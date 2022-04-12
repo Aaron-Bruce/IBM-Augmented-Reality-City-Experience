@@ -6,8 +6,8 @@
   <title>GeoAR.js demo</title>
   <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
   <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 
 <link rel="stylesheet" href="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/src/location-based/stylesheets/index.css">
@@ -30,8 +30,34 @@
           scale = '20, 20'>
   </a-image>
   <div id="markers">
-    <% @locations.each do |location| %>
-    <%end%>
+
+      <a-image
+        gps-entity-place="latitude: 53.3634684; longitude: -6.179984
+"
+        src="<%= image_path("map-marker.png") %>" width="5" height="5">
+
+              <a-text value="Conn's House" gps-entity-place="latitude: 53.3634684; longitude: -6.179984
+">
+
+              </a-text>
+
+
+
+              <a-text value="Open" gps-entity-place="latitude: 53.3634684; longitude: -6.179984
+">
+
+              </a-text>
+              <a-text value="Closed" gps-entity-place="latitude: 53.3634684; longitude: -6.179984
+">
+
+              </a-text>
+
+
+          <!-- Footer -->
+
+
+      </a-image>
+
   </div>
 </a-scene>
 

@@ -29,16 +29,16 @@ class HomeController < ApplicationController
       JSON.pretty_generate(@locations)
       #puts "locations = "
       puts @locations
-      # render :partial => 'marker', :content_type => 'text/html'
+      render '_marker'
     else
       @locations = {}
       puts "first locations = "
       puts @locations
       render 'home'
     end
-  #puts longitude
-  #puts latitude
-  #puts @locations["geometry"]["location"]["lat"]
+    #puts longitude
+    #puts latitude
+    #puts @locations["geometry"]["location"]["lat"]
   end
 
   # def data_update
