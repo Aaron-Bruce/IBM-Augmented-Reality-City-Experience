@@ -27,8 +27,10 @@ class HomeController < ApplicationController
       response = https.request(request)
 
       data = JSON.parse(response.read_body)
+      JSON.pretty_generate(data)
       @locations = data["results"]
-      puts "locations = "
+      JSON.pretty_generate(@locations)
+      #puts "locations = "
       puts @locations
       render '_marker'
     else
