@@ -11,9 +11,8 @@ AFRAME.registerComponent('selectSphere', {
 			}
 		}
 		this.el.addEventListener('click', this.select);
-	}
+	},
 	remove: function(){
 		this.el.removeEventListener('click', this.select);
 	}
-
-}
+})
