@@ -13,7 +13,7 @@ class HomeController < ApplicationController
       puts "data update"
       puts latitude
       puts longitude
-      radius = 50
+      radius = 2000
       #Use latitude and longitude to get data in radius, use Google Places API key from API_KEY.rb (not included in git)
       uri_string = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{latitude},#{longitude}&radius=#{radius}&key=#{KEY}"
       puts uri_string
